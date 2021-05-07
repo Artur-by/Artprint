@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import *
 
 # Create your views here.
 
@@ -25,7 +25,8 @@ def shopperPage(request):
     return render(request, 'zakaz5.html')
 
 def pillowPage(request):
-    return render(request, 'zakaz6.html')
+    form=pillowForms()
+    return render(request, 'zakaz6.html',{'form': form})
 
 def puzzlesPage(request):
     return render(request, 'zakaz7.html')
