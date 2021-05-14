@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from .forms import *
+from.models import *
 
 # Create your views here.
 
@@ -25,8 +27,18 @@ def shopperPage(request):
     return render(request, 'zakaz5.html')
 
 def pillowPage(request):
-    form=pillowForms()
-    return render(request, 'zakaz6.html',{'form': form})
+    if request.method == "POST":
+        #colorprice = request.GET.get ("Размер")
+        #sizeprice = request.GET.get ("Формат" )
+        #size = request.POST.get("Размер")
+        #ide = request.POST.get("Формат")
+
+        #formpillow = pillowForms()
+        return  render(request, '/zakaz/zakaz6', {'color':color})
+    else:
+
+        formpillow=pillowForms()
+        return render(request, 'zakaz6.html',{'formpillow': formpillow})
 
 def puzzlesPage(request):
     return render(request, 'zakaz7.html')
