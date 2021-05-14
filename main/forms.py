@@ -19,7 +19,7 @@ side = (
 )
 
 class pillowForms(forms.Form):
-    Цвет= forms.ChoiceField(required = False, choices = color)
+    Цвет = forms.ChoiceField(required = False, choices = color)
     Размер = forms.ChoiceField(choices = size)
     Формат = forms.ChoiceField(choices = side)
     #Принт = forms.ImageField()

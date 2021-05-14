@@ -34,9 +34,9 @@ def pillowPage(request):
         #ide = request.POST.get("Формат")
 
         #formpillow = pillowForms()
-        return  render(request, '/zakaz/zakaz6', {'color':color})
+        value = 10
+        return  render(request, 'zakaz6.html', {'value': value})
     else:
-
         formpillow=pillowForms()
         return render(request, 'zakaz6.html',{'formpillow': formpillow})
 

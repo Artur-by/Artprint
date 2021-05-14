@@ -136,3 +136,6 @@ button{
 	border: 2px solid SteelBlue;
 }
 
+.cost-block{
+    display: inline-block;
+}
