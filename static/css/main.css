@@ -137,5 +137,14 @@ button{
 }
 
 .cost-block{
-    display: inline-block;
+    text-align: center;
+    font-family: Calibri;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.select{
+    font-family: Calibri;
+    font-style: italic;
+    font-size: 24px;
 }

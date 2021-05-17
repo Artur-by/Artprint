@@ -18,3 +18,4 @@ class Sizepillow(models.Model):
 class Side(models.Model):
     side = models.CharField(max_length=20)
     price = models.FloatField()
+

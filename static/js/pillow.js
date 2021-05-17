@@ -1,16 +1,16 @@
 function getSumByColor(sum) {
     let color = document.getElementById('id_Цвет')
     if (color.value == 1){
-        sum += 10
+        sum += 0
     }
     else if (color.value == 2){
-        sum += 12
+        sum += 0.5
     }
     else if (color.value == 3){
-        sum += 12
+        sum += 2
     }
     else if (color.value == 4){
-        sum += 12
+        sum += 2
     }
     else if (color.value == 5){
         sum += 12
@@ -21,10 +21,10 @@ function getSumByColor(sum) {
 function getSumBySize(sum){
     let size = document.getElementById('id_Размер')
     if (size.value == 1){
-        sum += 10
+        sum += 0
     }
     else{
-        sum += 12
+        sum += 3
     }
     return sum
 }
@@ -32,10 +32,10 @@ function getSumBySize(sum){
 function getSumByPrint(sum) {
     let format = document.getElementById('id_Формат')
     if (format.value == 1){
-        sum += 10
+        sum += 5
     }
     else {
-        sum += 12
+        sum += 7
     }
     return sum
 }
@@ -47,5 +47,5 @@ function costValue(){
     sum = getSumByPrint(sum)
 
     let output = document.getElementById('costValueText')
-    output.innerHTML = sum
+    output.innerHTML = sum + ' руб.'
 }
