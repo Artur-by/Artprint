@@ -13,7 +13,7 @@ function getSumByColor(sum) {
         sum += 2
     }
     else if (color.value == 5){
-        sum += 12
+        sum += 2
     }
     return sum
 }
@@ -47,5 +47,5 @@ function costValue(){
     sum = getSumByPrint(sum)
 
     let output = document.getElementById('costValueText')
-    output.innerHTML = sum + ' руб.'
+    output.innerHTML = ' Цена '+ sum + ' руб.'
 }
