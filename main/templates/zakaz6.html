@@ -7,7 +7,7 @@
     <title>Артпечать</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
-    <script type="text/javascript" src="{% static 'js/pillow.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
   <header>
@@ -30,29 +30,26 @@
 
           <div class="col-2-3">
                 <div class="text2"> Укажите нужные параметры:  </div><br><br>
-
-            <div class="cost-block">
-                <div class = "select">
-                    <select id="id_Цвет">
-                        <option value="1">Белый</option>
-                        <option value="2">Бежевый</option>
-                        <option value="3">Иммитация льна</option>
-                        <option value="4">Шампань</option>
-                        <option value="5">Фисташковый</option>
-                    </select>
-                    <select id="id_Размер">
-                        <option value="1">35x35</option>
-                        <option value="2">40x40</option>
-                    </select>
-                    <select id="id_Формат">
-                        <option value="1">Односторонняя печать</option>
-                        <option value="2">Двусторонняя печать</option>
-                    </select>
-                    <input type="submit" value="Узнать цену" onClick="costValue()">
-                    <p id="costValueText"></p>
-                </div>
-            </div>
           </div>
+            <div class="cost-block">
+            <select id="id_Цвет">
+                <option value="1">Белый</option>
+                <option value="2">Бежевый</option>
+                <option value="3">Имитация льна</option>
+                <option value="4">Шампань</option>
+                <option value="5">Фисташковый</option>
+            </select>
+                <select id="id_Размер">
+                    <option value="1">35x35</option>
+                    <option value="2">40x40</option>
+                </select>
+                <select id="id_Формат">
+                    <option value="1">Односторонняя печать</option>
+                    <option value="2">Двусторонняя печать</option>
+                </select>
+            <input type="submit" value="Узнать цену" onClick="costValue()">
+            <p id="costValueText"></p>
+            </div>
         </div>
 <footer>
     <div class="container">

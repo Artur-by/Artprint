@@ -34,12 +34,11 @@ function costValue(){
     output.innerHTML = sum + ' руб.'
 }
 
-function zamena(){
-    let a = document.getElementById('id')
-    if(a == "img1") {
-           img1.src="static/min/shop2.jpg";
+function zamena(element){
+    let a = document.getElementById('imgValue')
+    if(element.id == "img1") {
+        a.src="/static/min/shop2.jpg";
     }
-    return false;
 }
 
 
