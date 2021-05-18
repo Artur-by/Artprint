@@ -36,7 +36,9 @@ function costValue(){
 
 function zamena(){
     let a = document.getElementById('id')
-    if(a == "img1") img1.src="{% static 'min/shop2.jpg' %}";
+    if(a == "img1") {
+           img1.src="static/min/shop2.jpg";
+    }
     return false;
 }
 
