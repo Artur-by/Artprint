@@ -31,4 +31,5 @@ urlpatterns = [
     path('zakaz/zakaz8', photoPage),
     path('zakaz/zakaz9', glassPage),
     path('zakaz/zakaz10', magnitPage),
+    path('nopasaran/', nopasaranPage),
 ]

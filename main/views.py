@@ -51,3 +51,11 @@ def glassPage(request):
 
 def magnitPage(request):
     return render(request, 'zakaz10.html')
+
+def nopasaranPage(request):
+    if request.method == "POST":
+
+        return  render(request, 'zakaz/zakaz6.html')
+    else:
+        form = answerForms()
+        return render(request, 'nopasaran.html')

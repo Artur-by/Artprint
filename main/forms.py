@@ -23,3 +23,6 @@ class pillowForms(forms.Form):
     Размер = forms.ChoiceField(choices = size)
     Формат = forms.ChoiceField(choices = side)
     #Принт = forms.ImageField()
+
+class answerForms (forms.Form):
+    ответ = forms.CharField()
