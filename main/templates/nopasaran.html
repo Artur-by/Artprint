@@ -26,13 +26,14 @@
           <br>
           <div class="row">
               <div class="col-1-3">
-                <img width="480" height="480" src="{% static 'image/uvaga.png' %}"/>
+                <img width="480" height="480" src="{% static 'image/uvaga.png' %}">
               </div>
               <div class="col-2-3">
                 <div class="text3"> Увага, пераход на наступную старонку можа пашкодзiць пачуццi некатарых грамадзян!  </div><br><br>
                 <div class="text3"> Каб перайсцi далей адкажыце на пытанне:  </div><br>
-                  <div class="text2"> Каго любiш ?  </div><br>
-                  <div class="text3"> Люблю  <input type="text" id="answer "><input type="submit" value="Адправiць"></div><br>
+                  <div class="text2"> Каго любiш ?  </div>
+                    <div class="text3"><form method="POST">{% csrf_token %} {{ form }}<input type="submit" value="Адправiць"></form></div><br>
+
 
                   <p style="text-align: center;">Падказка</p>
                   <img alt="" width="150" height="150" src="{% static 'image/kk.jpg' %}" style="position:absolute;left:980px;right:50px"”>

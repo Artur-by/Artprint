@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import *
+from .forms import answerForms
 from.models import *
 
 # Create your views here.
@@ -54,8 +54,12 @@ def magnitPage(request):
 
 def nopasaranPage(request):
     if request.method == "POST":
+        answer = request.POST.get("люблю")
+        if answer != "Беларусь":
+            return HttpResponse(f"<h3>Любiць  {answer} вельмi добра, але ж гэта не верны адказ, мабуць табе сюды i не трыба заходзiць!</h3>")
+        else:
+            return render(request, 'kkbchb.html')
 
-        return  render(request, 'zakaz/zakaz6.html')
     else:
         form = answerForms()
-        return render(request, 'nopasaran.html')
+        return render(request, 'nopasaran.html',{"form": answerForms})

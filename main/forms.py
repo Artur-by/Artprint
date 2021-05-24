@@ -18,11 +18,7 @@ side = (
     ("2", "двухсторонняя печать"),
 )
 
-class pillowForms(forms.Form):
-    Цвет = forms.ChoiceField(required = False, choices = color)
-    Размер = forms.ChoiceField(choices = size)
-    Формат = forms.ChoiceField(choices = side)
-    #Принт = forms.ImageField()
 
-class answerForms (forms.Form):
-    ответ = forms.CharField()
+
+class answerForms(forms.Form):
+    люблю = forms.CharField()
