@@ -19,3 +19,5 @@ class Side(models.Model):
     side = models.CharField(max_length=20)
     price = models.FloatField()
 
+#class Order(models.Model):
+#   product = models.CharField(max_length=10)

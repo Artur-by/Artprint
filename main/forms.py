@@ -22,3 +22,10 @@ side = (
 
 class answerForms(forms.Form):
     люблю = forms.CharField()
+
+class orderForms(forms.Form):
+    Id =forms.CharField()
+    Имя = forms.CharField()
+    Email = forms.EmailField()
+    телефон = forms.CharField()
+    принт = forms.ImageField()

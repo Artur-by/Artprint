@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', artprintPage),
     path('zakaz/', zakazPage),
+    path('order/', orderPage),
     path('zakaz/zakaz1', futbPage),
     path('zakaz/zakaz2', sweatPage),
     path('zakaz/zakaz3', tolstPage),
@@ -32,4 +33,5 @@ urlpatterns = [
     path('zakaz/zakaz9', glassPage),
     path('zakaz/zakaz10', magnitPage),
     path('nopasaran/', nopasaranPage),
+
 ]

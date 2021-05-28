@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import answerForms
+from .forms import *
 from.models import *
 
 # Create your views here.
@@ -37,7 +37,7 @@ def pillowPage(request):
         value = 10
         return  render(request, 'zakaz6.html', {'value': value})
     else:
-        formpillow=pillowForms()
+        formpillow = pillowForms()
         return render(request, 'zakaz6.html',{'formpillow': formpillow})
 
 def puzzlesPage(request):
@@ -63,3 +63,20 @@ def nopasaranPage(request):
     else:
         form = answerForms()
         return render(request, 'nopasaran.html',{"form": answerForms})
+
+def orderPage(request):
+    return render(request, 'order.html')
+
+def orderPage(request):
+    if request.method == "POST":
+        id = request.GET.get ("Продукт")
+        name = request.GET.get ("Имя")
+        Email = request.POST.get("Email")
+        телефон = request.POST.get("телефон")
+        print = request.POST.get("Принт")
+        return HttpResponse(f"<p>Hello {name} ur age is {Email}</p>")
+
+
+    else:
+        formorder = orderForms()
+        return render(request, 'order.html',{'formorder': orderForms})
