@@ -24,8 +24,8 @@ class answerForms(forms.Form):
     люблю = forms.CharField()
 
 class orderForms(forms.Form):
-    Id =forms.CharField()
+    Продукт = forms.ChoiceField(choices=((1, "Футболка"), (2, "Свитшот"), (3, "Толстовка"), (4, "Передник"), (5, "Шопер")))
     Имя = forms.CharField()
     Email = forms.EmailField()
     телефон = forms.CharField()
-    принт = forms.ImageField()
+    Принт = forms.ImageField()

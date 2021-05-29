@@ -24,16 +24,22 @@
     </header>
     <div class="text2"> Заполните поля:  </div><br><br>
                   <div class="cost-block">
-                      <div class="text3"> Выбирите продукт:  </div>
-                        <select id="id_Produkt">
-                            <option value="1">Футболка</option>
-                            <option value="2">Свитшот</option>
-                            <option value="3">Толстовка</option>
-                            <option value="1">Фартук</option>
-                            <option value="2">Шопер</option>
-                        </select>
+
+                      <form method="POST">{% csrf_token %}
+                          {% for field in form %}
+                            <p>
+                                <label>{{ field.label }}</label>
+                                {{ field }}
+
+                            </p>
+                          {% endfor %}
+
+
+                        <input class="send" type="submit" value="Отправить">
+                      </form>
                   </div>
-                  <div class="text3"><form method="POST">{% csrf_token %} {{ form }}<input type="submit" value="Адправiць"></form></div>
+    <br>
+    <br>
 
 
     <footer>

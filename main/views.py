@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import *
-from.models import *
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -69,14 +69,14 @@ def orderPage(request):
 
 def orderPage(request):
     if request.method == "POST":
-        id = request.GET.get ("Продукт")
-        name = request.GET.get ("Имя")
+        produkt = request.POST.get ("Продукт")
+        name = request.POST.get ("Имя")
         Email = request.POST.get("Email")
-        телефон = request.POST.get("телефон")
+        tel = request.POST.get("телефон")
         print = request.POST.get("Принт")
-        return HttpResponse(f"<p>Hello {name} ur age is {Email}</p>")
+        send_mail('Заказ с сайта Artprint', f'({produkt},{name},{Email},{tel},{print})','info@settings.by', ['info@settings.by'])
 
-
+        return HttpResponse(f"<p> {name} Ваше письмо успено отправлено, мы обязательно с Вами свяжемся в ближайшее время</p>")
     else:
-        formorder = orderForms()
-        return render(request, 'order.html',{'formorder': orderForms})
+        form = orderForms()
+        return render(request, 'order.html',{'form': orderForms})

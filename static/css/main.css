@@ -126,7 +126,7 @@ footer {
   color: White;
 }
 
-.button{
+button{
     margin-left:30px;
     margin-bottom:30px;
     color: #fff;
@@ -152,9 +152,17 @@ footer {
 .zakaz{
     position: relative;
     left: 400px;
-
     display: inline-block;
-    background: MediumVioletRed;
+    background: DarkOrchid;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    border-radius: 3px; /
+}
+
+.send{
+    display: inline-block;
+    background: DarkOrchid;
     color: #fff;
     padding: 0.5rem 2rem;
     text-decoration: none;
